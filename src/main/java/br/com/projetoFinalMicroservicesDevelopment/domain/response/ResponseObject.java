@@ -1,0 +1,23 @@
+package br.com.projetoFinalMicroservicesDevelopment.domain.response;
+
+public class ResponseObject extends Response {
+	
+	private Object data;
+	
+	public ResponseObject() {
+		
+	}
+	
+	public ResponseObject(long statusCode, String userMessage, String internalMessage, Object data) {
+		super(statusCode, userMessage, internalMessage);
+		this.data = data;
+	}
+
+	public Object getData() {
+		return data;
+	}
+
+	public void setData(Object data) {
+		this.data = data;
+	}
+}
